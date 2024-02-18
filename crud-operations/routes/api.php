@@ -22,3 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('addUser', [CrudmodelController::class,'addUser']);
 Route::PUT('editStatus', [CrudmodelController::class,'editStatus']);
+Route::DELETE('deleteUser', [CrudmodelController::class,'deleteUser']);
+Route::GET('getUsers', [CrudmodelController::class,'getUsers']);

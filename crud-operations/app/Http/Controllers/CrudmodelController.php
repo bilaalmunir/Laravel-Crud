@@ -25,4 +25,13 @@ class CrudmodelController extends Controller
         return $user;
 
     }
+    function deleteUser(Request $request){
+        $user = Crudmodel::findorfail($request->id);
+        $user->delete();
+        return " user deleted!";
+    }
+    function getUsers(){
+        $users = Crudmodel::all();
+        return $users;
+    }
 }
